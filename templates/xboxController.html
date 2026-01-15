@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Dual Stick Controller UI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='buttons.css') }}">
+</head>
+<body>
+    <div class="controller-container">
+        
+        <div class="top-buttons-group">
+            <button class="control-button shoulder-btn" id="shoulder-btn-L1" data-type="digital" data-key="L1">L1</button>
+            <button class="control-button trigger-btn" id="trigger-btn-L2" data-type="digital" data-key="L2">L2</button>
+            <button class="control-button trigger-btn" id="trigger-btn-R2" data-type="digital" data-key="R2">R2</button>
+            <button class="control-button shoulder-btn" id="shoulder-btn-R1" data-type="digital" data-key="R1">R1</button>
+        </div>
+
+        <div class="left-side-group">
+            <div class="joystick-container-left left-joystick">
+                <div class="joystick-cap" data-type="left"></div>
+            </div>
+            <div class="dpad-group">
+                <button class="control-button dpad-btn dpad-up" id="dpad-btn-up" data-type="dpad" data-key="up">UP</button>
+                <button class="control-button dpad-btn dpad-left" id="dpad-btn-left" data-type="dpad" data-key="left">LEFT</button>
+                <div class="dpad-center"></div> 
+                <button class="control-button dpad-btn dpad-right" id="dpad-btn-right" data-type="dpad" data-key="right">RIGHT</button>
+                <button class="control-button dpad-btn dpad-down" id="dpad-btn-down" data-type="dpad" data-key="down">DOWN</button>
+            </div>
+        </div>
+
+        <div class="right-side-group">
+            <div class="face-buttons-group">
+                <button class="control-button face-button button-y" id="face-button-y" data-type="face" data-key="y">Y</button>
+                <button class="control-button face-button button-x" id="face-button-x" data-type="face" data-key="x">X</button>
+                <button class="control-button face-button button-b" id="face-button-b" data-type="face" data-key="b">B</button>
+                <button class="control-button face-button button-a" id="face-button-a" data-type="face" data-key="a">A</button>
+            </div>
+            <div class="joystick-container-right right-joystick">
+                <div class="joystick-cap" data-type="right"></div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="{{ url_for('static', filename='xboxController.js') }}"></script>
+</body>
+</html>
